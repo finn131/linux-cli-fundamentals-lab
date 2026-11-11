@@ -54,10 +54,10 @@ Terminal menunjukkan perpindahan antar direktori menggunakan `pwd`, `cd`, `mkdir
 
 ## Evidence
 Screenshot praktik aslinya sudah tersimpan di folder `evidence/`:
-- `evidence/evidence-1.png`
-- `evidence/evidence-2.png`
-- `evidence/evidence-3.png`
-- `evidence/evidence-4.png`
+- ![EVIDENCE 1](evidence/evidence-1.png)
+- ![EVIDENCE 2](evidence/evidence-2.png)
+- ![EVIDENCE 3](evidence/evidence-3.png)
+- ![EVIDENCE 4](evidence/evidence-4.png)
 
 ## Conclusion
 Praktik successfully menunjukkan penggunaan perintah navigasi dasar (`pwd`, `ls`, `cd`, `mkdir`, `tree`) untuk berpindah dan menjelajahi struktur direktori di Linux.
