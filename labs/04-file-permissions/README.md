@@ -50,9 +50,9 @@ File memiliki permission `-rw-r--r--`, owner adalah `nyxx`, dan `stat` menampilk
 
 ## Evidence
 Screenshot praktik aslinya sudah tersimpan di folder `evidence/`:
-- `evidence/evidence-1.png`
-- `evidence/evidence-2.png`
-- `evidence/evidence-3.png`
+- ![EVIDENCE 1](evidence/evidence-1.png)
+- ![EVIDENCE 2](evidence/evidence-2.png)
+- ![EVIDENCE 3](evidence/evidence-3.png)
 
 ## Conclusion
 Praktik successfully menunjukkan perubahan permission menggunakan `chmod` dan verifikasi menggunakan `stat`, serta pemahaman tentang `chown`, `umask`, dan risiko `chmod 777`.

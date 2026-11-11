@@ -57,11 +57,11 @@ File `catatan-utama.txt` tersisa dengan isi dua baris, file backup dan direktori
 
 ## Evidence
 Screenshot praktik aslinya sudah tersimpan di folder `evidence/`:
-- `evidence/evidence-1.png`
-- `evidence/evidence-2.png`
-- `evidence/evidence-3.png`
-- `evidence/evidence-4.png`
-- `evidence/evidence-5.png`
+- ![EVIDENCE 1](evidence/evidence-1.png)
+- ![EVIDENCE 2](evidence/evidence-2.png)
+- ![EVIDENCE 3](evidence/evidence-3.png)
+- ![EVIDENCE 4](evidence/evidence-4.png)
+- ![EVIDENCE 5](evidence/evidence-5.png)
 
 ## Conclusion
 Praktik successfully menunjukkan penggunaan perintah file management (`touch`, `echo`, `cp`, `mv`, `rm`, `cat`) untuk membuat, menyalin, memindahkan, dan mengambil file di Linux.
