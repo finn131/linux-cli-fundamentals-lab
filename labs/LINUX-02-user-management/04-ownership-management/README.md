@@ -26,7 +26,7 @@ sudo chown testuser /srv/app/config.txt
 ls -la /srv/app/config.txt
 
 # Ubah owner dan group sekaligus
-sudo chown alice:developer /srv/app/data/db.txt
+sudo chown finnix:developer /srv/app/data/db.txt
 ls -la /srv/app/data/db.txt
 
 # Ubah group saja (chgrp)
@@ -56,7 +56,7 @@ ls -la file-baru.txt
 ## Expected Result
 - File `/srv/app/config.txt` milik `testuser` dan group `editor` dengan permission `640`.
 - Direktori `/srv/app/data/` milik `testuser:developer` dengan permission `750`.
-- File `db.txt` milik `alice:developer` dengan permission `644`.
+- File `db.txt` milik `finnix:developer` dengan permission `644`.
 - File baru `file-baru.txt` memiliki permission `644` (dipengaruhi `umask 022`).
 
 ## Analysis
@@ -74,6 +74,7 @@ Screenshot praktik aslinya sudah tersimpan di folder `evidence/`:
 - ![EVIDENCE 1](evidence/evidence-1.png)
 - ![EVIDENCE 2](evidence/evidence-2.png)
 - ![EVIDENCE 3](evidence/evidence-3.png)
+- ![EVIDENCE 4](evidence/evidence-4.png)
 
 ## Conclusion
 Praktik successfully menunjukkan perubahan ownership (`chown`, `chgrp`) dan permission (`chmod`, `umask`) sesuai kebutuhan akses yang aman dan terkontrol.

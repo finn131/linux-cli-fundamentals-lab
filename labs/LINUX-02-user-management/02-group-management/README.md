@@ -18,18 +18,14 @@ cat /etc/group | head -10
 
 # Tambahkan pengguna ke group (metode 1: usermod -aG)
 sudo usermod -aG developer testuser
-sudo usermod -aG editor alice
+sudo usermod -aG editor finnix
 id testuser
-id alice
+id finnix
 
 # Tambahkan pengguna ke group (metode 2: gpasswd -a)
 sudo gpasswd -a bob developer
 sudo gpasswd -a bob editor
 groups bob
-
-# Tambahkan beberapa pengguna sekaligus ke group
-sudo usermod -aG developer alice bob
-getent group developer
 
 # Hapus pengguna dari group
 sudo gpasswd -d bob editor
@@ -46,7 +42,7 @@ getent group developers
 ```
 
 ## Expected Result
-- Pengguna `testuser`, `alice`, dan `bob` masuk ke grup `developer` dan/atau `editor`.
+- Pengguna `testuser`, `finnix`, dan `bob` masuk ke grup `developer` dan/atau `editor`.
 - `id` dan `groups` menampilkan group sekunder yang sudah diperbarui.
 - Grup `devops` dengan GID 2000 dan `developers` (rename dari `tempgroup`) tercipta.
 
@@ -65,7 +61,6 @@ Screenshot praktik aslinya sudah tersimpan di folder `evidence/`:
 - ![EVIDENCE 2](evidence/evidence-2.png)
 - ![EVIDENCE 3](evidence/evidence-3.png)
 - ![EVIDENCE 4](evidence/evidence-4.png)
-- ![EVIDENCE 5](evidence/evidence-5.png)
 
 ## Conclusion
 Praktik successfully menunjukkan penambahan dan pengelolaan keanggotaan group (`usermod -aG`, `gpasswd -a/-d`, `groupadd -g`, `groupmod -n`) untuk mengatur akses berbasis group.

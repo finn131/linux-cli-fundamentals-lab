@@ -18,10 +18,10 @@ sudo groupadd editor
 
 # Buat pengguna baru (tanpa home, tanpa password dulu)
 sudo useradd -M -s /usr/bin/zsh testuser
-sudo useradd -M -s /usr/bin/zsh alice
+sudo useradd -M -s /usr/bin/zsh finnix
 
 # Atau buat dengan home directory otomatis
-sudo useradd -m -d /home/alice -s /usr/bin/zsh alice
+sudo useradd -m -d /home/finnix -s /usr/bin/zsh finnix
 
 # Set password
 sudo passwd testuser
@@ -29,13 +29,13 @@ sudo passwd testuser
 
 # Lihat detail pengguna
 id testuser
-id alice
+id finnix
 getent passwd testuser
-getent passwd alice
+getent passwd finnix
 
 # Lihat group milik pengguna
 groups testuser
-groups alice
+groups finnix
 
 # Buat user dengan group langsung (primary group = username)
 sudo useradd -m -g developer -G editor bob
@@ -61,7 +61,6 @@ Screenshot praktik aslinya sudah tersimpan di folder `evidence/`:
 - ![EVIDENCE 1](evidence/evidence-1.png)
 - ![EVIDENCE 2](evidence/evidence-2.png)
 - ![EVIDENCE 3](evidence/evidence-3.png)
-- ![EVIDENCE 4](evidence/evidence-4.png)
 
 ## Conclusion
 Praktik successfully menunjukkan pembuatan grup dan pengguna baru (`groupadd`, `useradd`, `passwd`, `id`) beserta konfigurasi group dan shell.

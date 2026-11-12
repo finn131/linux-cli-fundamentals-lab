@@ -15,7 +15,7 @@ Memahami arti permission read (r), write (w), dan execute (x) bagi user, group, 
 # Buat file dan direktori contoh
 touch contoh.txt
 mkdir contoh-dir
-ls -la contoh.txt contoh-dir
+ls -la 
 
 # Lihat permission dalam octal
 stat -c '%a %A %n' contoh.txt contoh-dir
