@@ -32,18 +32,27 @@ Detail environment lengkap di `docs/lab-environment.md`.
     │   │   └── evidence/
     │   └── 05-command-output-analysis/
     │       └── evidence/
-    └── LINUX-02-user-management/
-        ├── 01-user-management/
+    ├── LINUX-02-user-management/
+    │   ├── 01-user-management/
+    │   │   └── evidence/
+    │   ├── 02-group-management/
+    │   │   └── evidence/
+    │   ├── 03-permission-fundamentals/
+    │   │   └── evidence/
+    │   ├── 04-ownership-management/
+    │   │   └── evidence/
+    │   ├── 05-access-testing/
+    │   │   └── evidence/
+    │   └── 06-permission-analysis/
+    │       └── evidence/
+    └── LINUX-03-software-process-services/
+        ├── 01-package-management/
         │   └── evidence/
-        ├── 02-group-management/
+        ├── 02-process-management/
         │   └── evidence/
-        ├── 03-permission-fundamentals/
+        ├── 03-service-management/
         │   └── evidence/
-        ├── 04-ownership-management/
-        │   └── evidence/
-        ├── 05-access-testing/
-        │   └── evidence/
-        └── 06-permission-analysis/
+        └── 04-task-scheduling/
             └── evidence/
 ```
 
@@ -59,3 +68,4 @@ Detail environment lengkap di `docs/lab-environment.md`.
 |------------|-------|
 | **LINUX-01: Basic Linux** | 01 Directory Navigation · 02 File Management · 03 Basic Linux Command · 04 File Permissions · 05 Command Output Analysis |
 | **LINUX-02: User Management** | 01 User Management · 02 Group Management · 03 Permission Fundamentals · 04 Ownership Management · 05 Access Testing · 06 Permission Analysis |
+| **LINUX-03: Software, Process, Services** | 01 Package Management · 02 Process Management · 03 Service Management · 04 Task Scheduling |

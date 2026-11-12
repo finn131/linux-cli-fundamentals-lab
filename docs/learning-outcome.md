@@ -68,3 +68,32 @@ Setelah menyelesaikan semua lab, pembelajar mampu:
 - Menjelaskan alasan pemilihan konfigurasi hak akses berdasarkan prinsip least privilege.
 - Menerapkan klasifikasi data (publik/internal/rahasia) ke permission yang sesuai.
 - Memahami mengapa key private SSH harus `600`.
+
+# LINUX-03: Software, Process, Services
+
+## 01 Package Management
+- Memasang perangkat lunak dari repositori resmi dengan `pacman -S`.
+- Memperbarui semua paket dengan `pacman -Syu`.
+- Menghapus paket beserta dependensi orfan dengan `pacman -Rns`.
+- Memverifikasi hasil installasi (`which`, cek versi, jalankan).
+- Membedakan official repository dan AUR (`yay`/`paru`).
+
+## 02 Process Management
+- Memantau proses berjalan dengan `ps` dan `top`.
+- Menemukan PID proses dengan `pgrep` dan `pidof`.
+- Menghentikan proses dengan `kill` (TERM vs KILL) dan `killall`.
+- Mengatur prioritas proses dengan `renice` (nilai -20 hingga 19).
+- Mengelola background jobs (`&`, `jobs`, `fg`, `bg`).
+
+## 03 Service Management
+- Menjalankan, menghentikan, dan me-restart service dengan `systemctl`.
+- Mengaktifkan service agar berjalan saat boot dengan `systemctl enable`.
+- Memverifikasi status service dengan `systemctl is-active` dan `is-enabled`.
+- Membaca log service dengan `journalctl -u`.
+
+## 04 Task Scheduling
+- Menjadwalkan tugas berulang dengan systemd timers (`OnCalendar`).
+- Memastikan timer berjalan saat boot dengan `systemctl enable --now`.
+- Menjalankan tugas sekali/jadwal dengan `systemd-run --on-calendar`.
+- Memverifikasi eksekusi jadwal dengan `systemctl list-timers` dan `journalctl`.
+- Mengetahui alternatif cronie di Arch (`pacman -S cronie`).
