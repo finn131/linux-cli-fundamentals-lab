@@ -7,8 +7,7 @@ Memeriksa dan mengonfigurasi alamat IP, gateway, dan resolusi nama pada host.
 - OS: Arch Linux
 - Kernel: 7.2.11-arch1-1
 - Shell: zsh
-- Network interface: wlan0 (10.195.1.172/24)
-- Gateway: 10.195.1.53
+- Network interface: wlan0
 - DNS: 127.0.0.1 (local), 1.1.1.1, 8.8.8.8
 - Tools: ip, nmcli, nslookup
 - User: nyxx (uid 1000, wheel group)

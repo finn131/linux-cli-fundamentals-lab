@@ -32,7 +32,7 @@ sudo tee /etc/systemd/system/hello.timer > /dev/null <<'EOF'
 Description=Run hello service every minute
 
 [Timer]
-OnCalendar=*:0/60
+OnCalendar=minutely
 Persistent=true
 
 [Install]

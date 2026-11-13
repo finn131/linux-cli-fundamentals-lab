@@ -32,28 +32,25 @@ sudo systemctl stop bluetooth
 # 6. Restart service
 sudo systemctl restart bluetooth
 
-# 7. Reload config (tanpa gangguan layanan)
-sudo systemctl reload bluetooth
-
-# 8. Enable service (otomatisasi di boot)
+# 7. Enable service (otomatisasi di boot)
 sudo systemctl enable bluetooth
 sudo systemctl enable --now bluetooth   # enable + start sekaligus
 
-# 9. Disable service (tidak otomatisasi di boot)
+# 8. Disable service (tidak otomatisasi di boot)
 sudo systemctl disable bluetooth
 
-# 10. Cek service yang di-enable
+# 9. Cek service yang di-enable
 systemctl list-unit-files --type=service --state=enabled --no-pager
 
-# 11. Cek status service (ringkas)
+# 10. Cek status service (ringkas)
 systemctl is-active bluetooth
 systemctl is-enabled bluetooth
 
-# 12. Lihat log service
+# 11. Lihat log service
 journalctl -u bluetooth --no-pager -n 20
 journalctl -u bluetooth --since "1 hour ago" --no-pager
 
-# 13. Buat service sederhana (contoh: echo timer service)
+# 12. Buat service sederhana (contoh: echo timer service)
 sudo systemctl start systemd-timesyncd
 systemctl status systemd-timesyncd --no-pager
 ```
@@ -82,6 +79,7 @@ Screenshot praktik aslinya sudah tersimpan di folder `evidence/`:
 - ![EVIDENCE 3](evidence/evidence-3.png)
 - ![EVIDENCE 4](evidence/evidence-4.png)
 - ![EVIDENCE 5](evidence/evidence-5.png)
+- ![EVIDENCE 6](evidence/evidence-6.png)
 
 ## Conclusion
 Praktik successfully menunjukkan pengelolaan service (`systemctl start/stop/enable/disable/status`) dan verifikasi status, beserta akses log melalui `journalctl`.

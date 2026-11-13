@@ -25,7 +25,6 @@ pacman -Ss network
 
 # 4. Informasi paket sebelum install
 pacman -Si neovim
-pacman -Si neovim
 
 # 5. Install paket
 sudo pacman -S neovim
@@ -79,6 +78,10 @@ Screenshot praktik aslinya sudah tersimpan di folder `evidence/`:
 - ![EVIDENCE 1](evidence/evidence-1.png)
 - ![EVIDENCE 2](evidence/evidence-2.png)
 - ![EVIDENCE 3](evidence/evidence-3.png)
+- ![EVIDENCE 4](evidence/evidence-4.png)
+- ![EVIDENCE 5](evidence/evidence-5.png)
+- ![EVIDENCE 6](evidence/evidence-6.png)
+- ![EVIDENCE 7](evidence/evidence-7.png)
 
 ## Conclusion
 Praktik successfully menunjukkan siklus hidup paket (`pacman -Syu`, `-S`, `-R`, `-Rns`) dan verifikasi installasi, serta perbedaan official repo vs AUR.

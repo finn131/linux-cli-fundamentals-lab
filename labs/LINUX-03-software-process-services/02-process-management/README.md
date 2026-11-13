@@ -26,11 +26,11 @@ top
 
 # 4. Cari proses spesifik
 ps aux | grep bash
-ps aux | grep -v grep | grep nginx
+ps aux | grep -v 9router | grep python3
 
 # 5. Cek PID dari proses
-pgrep -a nginx
-pgrep -a -u nyxx bash
+pgrep -a tor
+pgrep -a -u nyxx zsh
 pidof systemd
 
 # 6. Hentikan proses (graceful)
@@ -42,8 +42,8 @@ kill -9 PID
 kill -KILL PID
 
 # 8. Hentikan semua proses berdasarkan nama
-killall nginx
-killall -9 nginx
+sudo killall httpd
+sudo killall -9 nginx
 
 # 9. Ubah prioritas proses (renice)
 # NI range: -20 (tinggi) ke 19 (rendah)
@@ -51,7 +51,7 @@ renice -n -5 -p PID
 renice -n 10 -p PID
 
 # 10. Lihat priority dan nice value
-ps -o pid,ppid,ni,stat,comm --sort=-ni | head -10
+ps -o pid,ppid,ni,stat,comm --sort=-ni
 
 # 11. Jalankan proses di background
 sleep 60 &
