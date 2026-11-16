@@ -26,7 +26,7 @@ ip route | grep default
 cat /etc/resolv.conf
 
 # 4. Periksa connectivity ke gateway
-ping -c 3 10.195.1.53
+ping -c 3 192.168.1.1
 
 # 5. Periksa connectivity ke internet
 ping -c 3 google.com
@@ -39,7 +39,6 @@ nslookup archlinux.org
 # 7. Dengan NetworkManager (jika pakai GUI/netplan)
 nmcli device status
 nmcli con show
-nmcli con show "wlan0" | grep ipv4
 
 # 8. Lihat semua protokol yang terhubung
 ss -tuln | grep LISTEN
@@ -76,6 +75,9 @@ Screenshot praktik aslinya sudah tersimpan di folder `evidence/`:
 - ![EVIDENCE 1](evidence/evidence-1.png)
 - ![EVIDENCE 2](evidence/evidence-2.png)
 - ![EVIDENCE 3](evidence/evidence-3.png)
+- ![EVIDENCE 4](evidence/evidence-4.png)
+- ![EVIDENCE 5](evidence/evidence-5.png)
+- ![EVIDENCE 6](evidence/evidence-6.png)
 
 ## Conclusion
 Praktik successfully memeriksa konfigurasi jaringan (IP, gateway, DNS, routing) dan menguji konektivitas basis (`ping`, `nslookup`).

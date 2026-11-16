@@ -9,7 +9,6 @@ Mengatur firewall host agar hanya membuka port layanan yang dibutuhkan.
 - Tools: iptables, nft (legacy), systemd
 - Services: sshd (port 22), NetworkManager (port 53 via DNS), named (port 53)
 - User: nyxx (uid 1000, wheel group)
-- Note: ufw tidak terinstall, gunakan iptables/nft
 
 ## Practical Implementation
 ```bash
@@ -109,6 +108,7 @@ Screenshot praktik aslinya sudah tersimpan di folder `evidence/`:
 - ![EVIDENCE 3](evidence/evidence-3.png)
 - ![EVIDENCE 4](evidence/evidence-4.png)
 - ![EVIDENCE 5](evidence/evidence-5.png)
+- ![EVIDENCE 6](evidence/evidence-6.png)
 
 ## Conclusion
 Praktik successfully mengonfigurasi firewall dengan `iptables`/`nftables` untuk membatasi akses — policy DROP, allow loopback, established connections, dan port layanan kritis seperti SSH (22).

@@ -16,7 +16,7 @@ Mendiagnosis gangguan konektivitas secara bertahap dari host sampai layanan tuju
 ping -c 3 127.0.0.1
 
 # 2. Test ping ke gateway
-ping -c 3 10.195.1.53
+ping -c 3 192.168.1.1
 
 # 3. Test ping ke DNS publik
 ping -c 3 8.8.8.8
@@ -43,11 +43,10 @@ ss -tuln | grep :53    # DNS port
 timeout 5 bash -c 'echo > /dev/tcp/google.com/80' && echo "TCP connect OK" || echo "TCP connect FAIL"
 
 # 10. Periksa routing ke tujuan
-ip route get google.com
 ip route get 8.8.8.8
 
-# 11. Test dengan mtr (jika tersedia)
-# mtr -r -c 5 google.com
+# 11. Test dengan mtr 
+mtr -r -c 5 google.com
 ```
 
 ## Expected Result
@@ -72,6 +71,8 @@ Screenshot praktik aslinya sudah tersimpan di folder `evidence/`:
 - ![EVIDENCE 2](evidence/evidence-2.png)
 - ![EVIDENCE 3](evidence/evidence-3.png)
 - ![EVIDENCE 4](evidence/evidence-4.png)
+- ![EVIDENCE 5](evidence/evidence-5.png)
+- ![EVIDENCE 6](evidence/evidence-6.png)
 
 ## Conclusion
 Praktik successfully menggunakan metodologi bertahap (localhost → gateway → internet → DNS) untuk mendiagnosis gangguan konektivitas, dengan alat `ping`, `tracepath`, `ss`, `nslookup`, dan `dig`.

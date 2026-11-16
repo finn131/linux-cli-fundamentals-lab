@@ -39,14 +39,10 @@ sudo systemctl restart sshd
 sudo systemctl status sshd --no-pager
 
 # 8. Test connection ke server sendiri (from localhost)
-ssh -o BatchMode=yes -o ConnectTimeout=5 -p 22 nyxx@localhost 'echo "SSH key auth OK"'
+ssh -i ~/.ssh/id_rsa_manual -o IdentitiesOnly=yes -o BatchMode=yes -o ConnectTimeout=5 -p 22 nyxx@localhost 'echo "SSH key auth OK"'
 
-# 9. Generate key untuk user lain (contoh testing)
-sudo su - -c 'ssh-keygen -t ed25519 -C "testuser@localhost" -f /home/testuser/.ssh/id_ed25519'
-sudo chown -R testuser:testuser /home/testuser/.ssh
-
-# 10. Disable password auth (final config)
-sudo sshd -T | grep -E 'passwordauthentication|permitrootlogin'
+# 9. Disable password auth (final config)
+sudo sshd -T | grep -iE 'passwordauthentication|permitrootlogin'
 ```
 
 ## Expected Result
@@ -72,7 +68,6 @@ Screenshot praktik aslinya sudah tersimpan di folder `evidence/`:
 - ![EVIDENCE 2](evidence/evidence-2.png)
 - ![EVIDENCE 3](evidence/evidence-3.png)
 - ![EVIDENCE 4](evidence/evidence-4.png)
-- ![EVIDENCE 5](evidence/evidence-5.png)
 
 ## Conclusion
 Praktik successfully menunjukkan pembuatan SSH key pair (`ssh-keygen`), setup authorized_keys, konfigurasi sshd untuk key-only authentication, serta pembatasan login tidak perlu (`PasswordAuthentication no`, `PermitRootLogin no`).
