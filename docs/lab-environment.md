@@ -54,3 +54,7 @@
 - Untuk testing akses, buat user tambahan dengan `sudo -u` atau `su`.
 - Semua perintah dijalankan di `/home/nyxx` kecuali dinyatakan lain.
 - Untuk service/systemd timer, butuh `sudo` (wheel group).
+- Untuk log monitoring, systemd-journald persisten di `/var/log/journal` (±1.7G).
+- Untuk storage management, gunakan loop device (`losetup`) — jangan ubah partisi asli.
+- Untuk network, NetworkManager manajamen jaringan, DNS: 127.0.0.1, 1.1.1.1, 8.8.8.8.
+- Untuk firewall, `iptables` tersedia, `ufw` tidak terinstall.

@@ -97,3 +97,54 @@ Setelah menyelesaikan semua lab, pembelajar mampu:
 - Menjalankan tugas sekali/jadwal dengan `systemd-run --on-calendar`.
 - Memverifikasi eksekusi jadwal dengan `systemctl list-timers` dan `journalctl`.
 - Mengetahui alternatif cronie di Arch (`pacman -S cronie`).
+
+# LINUX-04: Network, Remote Access
+
+## 01 Network Configuration
+- Memeriksa alamat IP, gateway, dan DNS resolver (`ip addr`, `ip route`, `resolv.conf`).
+- Menguji konektivitas basis (`ping`, `nslookup`).
+- Memeriksa port yang listening (`ss -tuln`).
+
+## 02 Network Troubleshooting
+- Mendiagnosis gangguan konektivitas bertahap: localhost → gateway → internet → DNS.
+- Menelusuri path jaringan dengan `tracepath`.
+- Mengakses log service dengan `journalctl -u`.
+- Menguji koneksi TCP (`/dev/tcp`) dan routing (`ip route get`).
+
+## 03 SSH Key Authentication
+- Membuat SSH key pair (`ssh-keygen`) dan setup `authorized_keys`.
+- Mengonfigurasi `sshd_config` untuk key-only auth (`PasswordAuthentication no`).
+- Membatasi login tidak perlu (`PermitRootLogin no`).
+- Memverifikasi koneksi SSH tanpa password.
+
+## 04 Host Firewall
+- Mengatur firewall dengan `iptables` — policy DROP, allow loopback/established/SSH.
+- Mengonfigurasi `nftables` sebagai alternatif modern.
+- Menyimpan rules permanen (`iptables-save`, `nft list ruleset`).
+
+# LINUX-05: Monitoring, Storage, Troubleshooting
+
+## 01 Log Analysis
+- Menganalisis log sistem dan layanan (`journalctl`, `dmesg`, `last`, `lastb`).
+- Filter log per priority/service/boot dan mencari pola dengan `grep`.
+- Memeriksa riwayat login dan log aplikasi/paket (`/var/log/pacman.log`).
+
+## 02 Resource Monitoring
+- Memantau CPU (`top`, `htop`, `vmstat`), RAM (`free`, `ps --sort=-%mem`), dan storage (`df`, `du`).
+- Memahami load average dan interprestasinya terhadap jumlah CPU.
+- Mengidentifikasi proses boros resource dan file besar yang boros storage.
+
+## 03 Storage Management
+- Inspeksi block device (`lsblk`, `df`, `mount`).
+- Membuat filesystem (`mkfs.ext4`, `mkfs.vfat`) via loop device (aman).
+- Mount/unmount volume dan konfigurasi `fstab` persisten.
+
+## 04 Backup and Recovery
+- Mencadangkan data dengan `tar` (archive) dan `rsync` (inkremental).
+- Memverifikasi integritas cadangan (`sha256sum`).
+- Memulihkan data dari backup dan membuktikan restore berhasil.
+
+## 05 System Troubleshooting
+- Troubleshooting sistematis 5 langkah: Identifikasi → Data → Diagnosis → Tindakan → Verifikasi.
+- Mengumpulkan data: log kernel/service, resource, network, boot analysis.
+- Tindakan perbaikan: `systemctl restart`, `journalctl --vacuum`, cleanup storage.

@@ -45,14 +45,25 @@ Detail environment lengkap di `docs/lab-environment.md`.
     │   │   └── evidence/
     │   └── 06-permission-analysis/
     │       └── evidence/
-    └── LINUX-03-software-process-services/
-        ├── 01-package-management/
+    ├── LINUX-04-network-remote-access/
+    │   ├── 01-network-configuration/
+    │   │   └── evidence/
+    │   ├── 02-network-troubleshooting/
+    │   │   └── evidence/
+    │   ├── 03-ssh-key-auth/
+    │   │   └── evidence/
+    │   └── 04-host-firewall/
+    │       └── evidence/
+    └── LINUX-05-monitoring-storage-troubleshooting/
+        ├── 01-log-analysis/
         │   └── evidence/
-        ├── 02-process-management/
+        ├── 02-resource-monitoring/
         │   └── evidence/
-        ├── 03-service-management/
+        ├── 03-storage-management/
         │   └── evidence/
-        └── 04-task-scheduling/
+        ├── 04-backup-and-recovery/
+        │   └── evidence/
+        └── 05-system-troubleshooting/
             └── evidence/
 ```
 
@@ -61,7 +72,7 @@ Detail environment lengkap di `docs/lab-environment.md`.
 2. Cek `docs/lab-environment.md` untuk detail environment.
 3. Ikuti langkah-langkah di README masing-masing folder `labs/`.
 4. Jalankan perintah di terminal, catat output ke folder `evidence/` (screenshot atau `tee`).
-5. Untuk contoh script, lihat `scripts/system-info.sh` dan `scripts/user-audit.sh`.
+5. Untuk contoh script, lihat `scripts/system-info.sh`, `scripts/user-audit.sh`, dan `scripts/storage-check.sh`.
 
 ## Kompetensi
 | Kompetensi | Topik |
@@ -69,3 +80,5 @@ Detail environment lengkap di `docs/lab-environment.md`.
 | **LINUX-01: Basic Linux** | 01 Directory Navigation · 02 File Management · 03 Basic Linux Command · 04 File Permissions · 05 Command Output Analysis |
 | **LINUX-02: User Management** | 01 User Management · 02 Group Management · 03 Permission Fundamentals · 04 Ownership Management · 05 Access Testing · 06 Permission Analysis |
 | **LINUX-03: Software, Process, Services** | 01 Package Management · 02 Process Management · 03 Service Management · 04 Task Scheduling |
+| **LINUX-04: Network, Remote Access** | 01 Network Configuration · 02 Network Troubleshooting · 03 SSH Key Authentication · 04 Host Firewall |
+| **LINUX-05: Monitoring, Storage, Troubleshooting** | 01 Log Analysis · 02 Resource Monitoring · 03 Storage Management · 04 Backup & Recovery · 05 System Troubleshooting |
